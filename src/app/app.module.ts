@@ -1,4 +1,3 @@
-import { LoginComponent } from './modules/login/login.component';
 import { ErrorInterceptor } from './_helpers/error.interceptor';
 import { JwtInterceptor } from './_helpers/jwt.interceptor';
 import { ThemeModule } from './../@theme/theme.module';
@@ -18,7 +17,7 @@ import { HTTP_INTERCEPTORS } from '@angular/common/http';
     BrowserModule,
     AppRoutingModule,
     MDBBootstrapModule.forRoot(),
-    ThemeModule
+    ThemeModule.forRoot()
   ],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },
