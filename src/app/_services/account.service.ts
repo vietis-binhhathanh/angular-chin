@@ -35,10 +35,10 @@ export class AccountService {
     // Xóa thông tin và đặt thông tin người dùng hiện tại thành null, chuyển về trang login.
     localStorage.removeItem('user');
     this.userSubject.next(null);
-    this.router.navigate(['/login']);
+    this.router.navigate(['/']);
   }
 
   register(user: User) {
-    return this.http.post(`${environment}/auth/register`, user);
+    return this.http.post(`${environment.apiUrl}/auth/register`, user);
   }
 }

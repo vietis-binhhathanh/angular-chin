@@ -1,4 +1,8 @@
 /* You can add global styles to this file, and also import other style files */
+a {
+    cursor: pointer;
+}
+
 .content {
     min-height: calc(100vh - 72px);
     padding-top: 56px;

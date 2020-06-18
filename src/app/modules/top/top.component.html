@@ -1,1 +1,11 @@
-<p>top works!</p>
+<div class="top">
+    <h1 *ngIf="user; else login">Hello {{ user.user.username }}</h1>
+    <ng-template #login>
+        <div>
+            <h1>Not logged in... please</h1>
+            <a routerLink="/login" class="btn btn-primary">Login</a>
+            <span class="mx-3">or</span>
+            <a routerLink="/register" class="btn btn-secondary">Register</a>
+        </div>
+    </ng-template>
+</div>

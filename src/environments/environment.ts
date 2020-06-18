@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  apiUrl: 'https://nestjsserver.herokuapp.com/'
+  apiUrl: 'https://nestjsserver.herokuapp.com'
 };
 
 /*

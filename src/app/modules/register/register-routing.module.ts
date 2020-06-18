@@ -1,15 +1,14 @@
-import { ThemeModule } from './../../../@theme/theme.module';
-import { TopComponent } from './top.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { RegisterComponent } from './register.component';
 
 
 const routes: Routes = [
-  { path: '', component: TopComponent }
+  { path: '', component: RegisterComponent }
 ];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
-export class TopRoutingModule { }
+export class RegisterRoutingModule { }

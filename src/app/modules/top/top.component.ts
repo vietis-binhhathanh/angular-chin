@@ -1,3 +1,5 @@
+import { AccountService } from './../../_services/account.service';
+import { User } from './../../_models/user';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -6,8 +8,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./top.component.scss']
 })
 export class TopComponent implements OnInit {
+  user: User;
+  username: User;
 
-  constructor() { }
+  constructor(
+    private accountService: AccountService
+  ) { 
+    this.accountService.user.subscribe(x => this.user = x);  
+  }
 
   ngOnInit(): void {
   }

@@ -15,7 +15,10 @@
     <div class="collapse navbar-collapse" id="navbarResponsive">
       <ul class="navbar-nav ml-auto">
         <li class="nav-item active">
-          <a class="btn btn-primary" routerLink="/login">Login</a>
+          <div *ngIf="user">
+            <h6 class="text-white">Hello {{ user.user.username }}</h6>
+            <a (click)="logout()" class="btn btn-warning btn-sm font-weight-bold">Đăng xuất</a> 
+          </div>                                     
         </li>
       </ul>
     </div>

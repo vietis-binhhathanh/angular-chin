@@ -5,8 +5,9 @@ import { Routes, RouterModule } from '@angular/router';
 const routes: Routes = [
   { path: '', loadChildren: () => import('./modules/top/top.module').then(o => o.TopModule) },
   { path: 'login', loadChildren: () => import('./modules/login/login.module').then(o => o.LoginModule) },
-  // otherwise redirect to home
-  { path: '**', redirectTo: '' }
+  { path: 'register', loadChildren: () => import('./modules/register/register.module').then(o => o.RegisterModule) },
+  { path: 'error', loadChildren: () => import('./modules/error/error.module').then(o => o.ErrorModule) },
+  { path: '**', redirectTo: '/error/404' }
 ];
 
 @NgModule({

@@ -1,3 +1,4 @@
+import { ThemeModule } from './../../../@theme/theme.module';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
@@ -9,7 +10,7 @@ import { TopComponent } from './top.component';
   declarations: [TopComponent],
   imports: [
     CommonModule,
-    TopRoutingModule
+    TopRoutingModule       
   ]
 })
 export class TopModule { }
